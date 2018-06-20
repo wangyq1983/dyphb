@@ -1,4 +1,6 @@
 //app.js
+var webhost = 'http://api-dev.jiyoushe.cn/v2/';
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -35,13 +37,11 @@ App({
   },
   globalData: {
     userInfo: null,
-
     zhuboApi:{
-      dianzanApi:"http://api-dev.jiyoushe.cn/v2/circles/get_circle_list",
-      fensi:"http://api-dev.jiyoushe.cn/v2/rank/ranking_country_list",
-      pinglun:"http://api-dev.jiyoushe.cn/v2/amwaywall/get_list",
-      biaosheng:"http://api.jiyoushe.cn/v2/homepage/get_recommend_list"
+      dianzanApi: webhost+"circles/get_circle_list",
+      fensi: webhost+"rank/ranking_country_list",
+      pinglun: webhost+"amwaywall/get_list",
+      biaosheng: webhost+"homepage/get_recommend_list"
     },
-
   }
 })
